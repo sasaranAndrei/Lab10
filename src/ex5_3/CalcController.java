@@ -1,4 +1,4 @@
-package ex5_3;
+    package ex5_3;
 
 import java.awt.event.*;
 
@@ -51,4 +51,20 @@ public class CalcController {
             m_view.reset();
         }
     }// end inner class ClearListener
+
+    class AddListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String userInput = "";
+            try{
+                userInput = m_view.getUserInput();
+                m_model.add(userInput);
+                m_view.setTotal(m_model.getValue());
+            }
+            catch (NumberFormatException nfex) {
+            m_view.showError("Bad input: '" + userInput + "'");
+            }
+        }
+    }
 }

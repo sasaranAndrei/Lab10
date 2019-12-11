@@ -37,6 +37,10 @@ public class CalcModel { //... Constants
     }
     //================================================================= setValue
 
+    public void add (String operand){
+        m_total = m_total.add(new BigInteger(operand));
+    }
+
     /**
      * Set the total value.
      *

@@ -69,4 +69,8 @@ public class CalcView extends JFrame {
     void addClearListener(ActionListener cal) {
         m_clearBtn.addActionListener(cal);
     }
+
+    void addSumListener (ActionListener add){
+        m_addBtn.addActionListener(add);
+    }
 }
